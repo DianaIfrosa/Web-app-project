@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html {
+    font-size: 16px;
+    overflow: hidden;
+}
+
+
+body {
+
+    background-image: url("../../../images/main.jpg");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*imaginea de background sa acopere tot containerul*/
+    background-size: cover;
+    background-position-x: center;
+
+    --padding-intern: 0.5rem;
+    --padding-body: 15rem;
+
+    --light-yellow: #fff598;
+    --medium-purple: #9813b9;
+    --dark-purple: #520178;
+    --light-purple: #D7A6EE;
+
+    min-width: 330px;
+    padding-top: 0;
+    padding-bottom: var(--padding-body);
+    padding-right: var(--padding-body);
+    padding-left: var(--padding-body);
+
+    /*font google api*/
+    font-family: 'Playfair Display', serif;
+    
+    --inaltime-meniu: 4rem;
+    background-color: var(--light-purple);
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    
+}
+
+.container{
+    padding-top: 5rem;
+}

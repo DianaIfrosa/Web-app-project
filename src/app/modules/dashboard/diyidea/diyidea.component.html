@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<body>
+    <main>
+        <app-menu></app-menu>
+
+        <div class="container">
+            <mat-card>
+                <h1 class = "name">
+                    More details about this idea
+                </h1>
+                <h2>
+                    Title: {{idea.name}}
+                </h2>
+                <p>
+                    Description: {{idea.description}}
+                </p>
+                <p>
+                    Time to make: {{idea.time}} minutes.
+                </p>
+                <p>
+                    Materials needed: <li *ngFor="let elem of idea.materialsDIYIdeas;"> {{elem.material.name}} </li>  
+                </p>
+            </mat-card>
+        </div>
+    </main>
+</body>
+</html>

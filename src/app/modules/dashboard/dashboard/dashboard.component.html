@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<body>
+    <main>
+        <app-menu
+         [messageFromParent] = "parentMessage"
+         (messageFromChild) = "receiveMessage($event)"
+
+        ></app-menu>
+
+        <div class="container">
+        <!-- Formular -->
+        <form [formGroup]="filterForm" class="form">
+            <mat-form-field appearance="standard">
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Enter a suggestive word" formControlName="text" />
+            </mat-form-field>
+        </form>
+        <p> Please press space first!</p>
+
+            <table mat-table [dataSource]="copyDataSource" multiTemplateDataRows class="mat-elevation-z8">
+                <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+                    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}}</td>
+                </ng-container>
+                <ng-container matColumnDef="expand">
+                    <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button aria-label="expand row"
+                            (click)="(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()">
+                            <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+                            <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <!-- Expanded Content Column -->
+                <ng-container matColumnDef="expandedDetail">
+                    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+                        <div class="example-element-detail"
+                            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+
+                            <div class="example-element-time" >
+                                <!-- Folosirea directivei create -->
+                                <p appHover> Time to make this: {{element.time}} minutes </p>
+                            </div>
+                            <div class="example-element-video">
+                                <!-- Folosirea pipe-ului creat -->
+                                <iframe width="300" height="120" [src]=" element.presentationVideo.link| safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="button-info">
+                                <button  role="button" (click)="goToIdea(element.id)">See more details</button>
+                            </div>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+                <tr mat-row *matRowDef="let element; columns: columnsToDisplayWithExpand;" class="example-element-row"
+                    [class.example-expanded-row]="expandedElement === element"
+                    (click)="expandedElement = expandedElement === element ? null : element">
+                </tr>
+                <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

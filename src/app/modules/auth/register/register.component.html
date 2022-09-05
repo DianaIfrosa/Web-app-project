@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<body>
+
+    <main>
+        <div id="sticky-notes">
+            <ul>
+                <li>
+                    <a>
+                        <h2>Nice to meet you! </h2>
+                        <p> We believe that you have found the best
+                            place to enhance your creativity while having fun at the same time.
+                        </p>
+                    </a>
+
+                </li>
+                <li>
+                    <a>
+                        <h2>
+                            About:
+                        </h2>
+                        <p> Here you will be able to find
+                            lots of DIY ideas to make your home, garden or even wardrobe look more fantastic than ever.
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <h2> Don't forget...</h2>
+                        <p> The secret ingredient is to have fun!</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+
+            <div class="message-section">
+                <h2>
+                    <b>
+                        Please give us some information to create your account:
+                    </b>
+                </h2>
+            </div>
+            <div class="form-sections">
+                <form [formGroup]="registerForm" class="form">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="pat@example.com" [formControl]="email" required/>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage('email')}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label> Password </mat-label>
+                        <input matInput placeholder="Password" type="password"  [formControl]="password" required/>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage('password')}}</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label> Confirm the password </mat-label>
+                        <input matInput placeholder="Password" type="password"  [formControl]="password" required/>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage('password')}}</mat-error>
+                    </mat-form-field>
+
+                    <p> How did you find us? </p>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label> Choose from these options </mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let option of options" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+
+                <button mat-raised-button (click)="register()" class="button-1" role="button">
+                    Register
+                </button>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

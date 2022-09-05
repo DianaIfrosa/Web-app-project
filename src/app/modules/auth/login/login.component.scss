@@ -1,0 +1,156 @@
+html{
+  font-size: 18px;
+  overflow: hidden;
+}
+body{
+
+  background-image:url("../../../images/login.jpg");
+   
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /*imaginea de background sa acopere tot containerul*/
+  background-size: cover;
+  
+  --padding-intern: 0.5rem;
+  --padding-body: 15rem;
+
+  --light-yellow: #fff598;
+  --medium-purple: #9813b9;
+  --dark-purple: #520178;
+
+  min-width:330px;
+  padding-top: 0;
+  padding-bottom:var(--padding-body);
+  padding-right: var(--padding-body);
+  padding-left: var(--padding-body);
+
+  /*font google api*/
+  font-family: 'Playfair Display', serif;
+}
+
+main{
+  padding-top:var(--padding-body);
+  padding-bottom:var(--padding-body);
+  padding-right: var(--padding-body);
+  padding-left: var(--padding-body);
+
+}
+
+.container{
+  width: 50%;
+  text-align: center;
+}
+
+.form-sections{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .form{
+    .mat-form-field{
+        width: 100%;
+    }
+  }
+}
+
+.button-1 {
+  align-items: center;
+  appearance: none;
+  background-color: var(--medium-purple);
+  background-image: linear-gradient(1deg, yellow, var(--medium-purple) 90%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1.5rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-1:active,
+.button-1:focus {
+  outline: none;
+}
+
+.button-1:hover {
+  background-position: -20px -20px;
+}
+
+.button-1:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+.message-section{
+    text-align: center;
+    color: var(--dark-purple);
+}
+
+#register{
+  margin-top: 2rem;
+  border-top: 1px var(--dark-purple) solid;
+  padding: 10px;
+}
+
+.button-2 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #FFF598 0, #B36AD5 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-2:focus {
+  box-shadow: purple 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, purple 0 -3px 0 inset;
+}
+
+.button-2:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, purple 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-2:active {
+  box-shadow: #5adaff 0 3px 7px inset;
+  transform: translateY(2px);
+}

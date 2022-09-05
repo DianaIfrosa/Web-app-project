@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <div class="message-section" id="login">
+                <h1>
+                    <b>
+                        Log into your account:
+                    </b>
+                </h1>
+            </div>
+            <div class="form-sections">
+                <form [formGroup]="loginForm" class="form">
+                    <mat-form-field appearance="outline">
+                        <mat-label> Username </mat-label>
+                        <input matInput placeholder="Username" formControlName="username" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label> Password </mat-label>
+                        <input matInput placeholder="Password" type="password" formControlName="password" />
+                    </mat-form-field>
+
+                </form>
+
+                <button mat-raised-button (click)="login()" class="button-1" role="button">
+                    Login
+                </button>
+
+
+            </div>
+            <div class="message-section" id="register">
+                <p>
+                    Or create an account here:
+                </p>
+            </div>
+
+            <button mat-raised-button (click)="goToRegister()" class="button-2" role="button">
+                Go to register
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

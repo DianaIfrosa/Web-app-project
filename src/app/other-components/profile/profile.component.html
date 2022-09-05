@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<body>
+    <main>
+        <nav class="navMenu">
+            <a href="/home">Home</a>
+            <a href="/dashboard">Ideas</a>
+            <a href="/profile">My profile</a>
+            <div class="dot"></div>
+          </nav>
+
+        <div class="button">
+            <button mat-raised-button (click)="logout()" role="button" class="button-2" >
+                Logout
+            </button>
+        </div>
+        <div class="text">
+            <p>Hello {{loggedUser.username}}! In this page you can modify your account's details. </p>
+            <p>Your email: {{username}}</p>
+            <!-- Formular -->
+            <div class="form-sections">
+                <form [formGroup]="profileForm" class="form">
+            
+                    <mat-form-field appearance="outline">
+                        <mat-label> Change your password </mat-label>
+                        <input matInput placeholder="Password" type="password" formControlName="password" />
+                    </mat-form-field>
+
+                </form>
+
+                <button mat-raised-button (click)="change()" class="button-2" role="button">
+                    Change
+                </button>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

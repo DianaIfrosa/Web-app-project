@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html {
+    font-size: 20px;
+    overflow: hidden;
+}
+
+body {
+
+    background-image: url("../../images/background2.jpg");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*imaginea de background sa acopere tot containerul*/
+    background-size: cover;
+    background-position: 2%;
+
+    --padding-intern: 0.5rem;
+    --padding-body: 15rem;
+
+    --light-yellow: #fff598;
+    --medium-purple: #9813b9;
+    --dark-purple: #520178;
+    --light-purple: #D7A6EE;
+
+    padding-top: 0;
+    padding-bottom: var(--padding-body);
+    padding-right: var(--padding-body);
+    padding-left: var(--padding-body);
+
+    /*font google api*/
+    font-family: 'Playfair Display', serif;
+
+    --inaltime-meniu: 4rem;
+    background-color: var(--light-purple);
+}
+
+.text {
+    font-size: 2rem;
+    color: var(--medium-purple);
+    text-align: center;
+    margin-top: 9rem;
+    left: 10rem;
+
+}
+
+.button {
+    text-align: center;
+
+    button {
+        font-size: 2rem;
+        margin-top:10rem;
+        align-items: center;
+    }
+
+}
+
+.navMenu {
+    position: absolute;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-top: 9rem;
+    
+  }
+  
+  .navMenu a {
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-purple);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 170px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    // border: red 2px solid;
+  }
+  
+  .navMenu a:hover {
+    color: #fddb3a;
+  }
+  
+  .navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(155px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(320px);
+    transform: translateX(420px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .form-sections{
+    align-items: center;
+    justify-content: space-around;
+  
+    .form{
+      .mat-form-field{
+          width: 30%;
+          font-size: 15px;
+      }
+    }
+  }
+
+  .button-2 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #FFF598 0, #B36AD5 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+  
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .button-2:focus {
+    box-shadow: purple 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, purple 0 -3px 0 inset;
+  }
+  
+  .button-2:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, purple 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-2:active {
+    box-shadow: #5adaff 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  

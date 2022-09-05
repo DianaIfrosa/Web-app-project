@@ -1,0 +1,166 @@
+html{
+    font-size: 16px;
+    overflow: hidden;
+}
+  body{
+  
+    background-image:url("../../../images/register.jpg");
+     
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    /*imaginea de background sa acopere tot containerul*/
+    background-size: cover;
+    
+    --padding-intern: 0.5rem;
+    --padding-body: 15rem;
+  
+    --light-yellow: #fff598;
+    --medium-purple: #9813b9;
+    --dark-purple: #520178;
+    --light-purple: #D7A6EE;
+  
+    min-width:330px;
+    padding-top: 0;
+    padding-bottom:var(--padding-body);
+    padding-right: var(--padding-body);
+    padding-left: var(--padding-body);
+  
+    /*font google api*/
+    font-family: 'Playfair Display', serif;
+  }
+  
+  main{
+    padding-top: 8rem;
+    padding-bottom:var(--padding-body);
+    padding-right: var(--padding-body);
+  
+  }
+  
+  .container{
+    width: 50%;
+    text-align: center;
+  }
+  
+  .form-sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    .form{
+      .mat-form-field{
+          width: 80%;
+      }
+    }
+  }
+  
+  .button-1 {
+    align-items: center;
+    appearance: none;
+    background-color: var(--medium-purple);
+    background-image: linear-gradient(1deg, yellow, var(--medium-purple) 90%);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd,sans-serif;
+    font-size: 1.5rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s,background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  .button-1:active,
+  .button-1:focus {
+    outline: none;
+  }
+  
+  .button-1:hover {
+    background-position: -20px -20px;
+  }
+  
+  .button-1:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+  }
+  
+  .message-section{
+      text-align: center;
+      color: var(--dark-purple);
+  }
+
+  ul,li{
+    list-style:none;
+  }
+  ul li a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:10em;
+    width:10em;
+    padding:1rem;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+    transition: transform .15s linear;
+  }
+
+  a{
+    font-family: 'Reenie Beanie';
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  ul li:nth-child(1) a{
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+  }
+  ul li:nth-child(2) a{
+    transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#ccf;
+  }
+  ul li:nth-child(3) a{
+    transform:rotate(5deg);
+    position:relative;
+    top:-10px;
+    background-color: #D7A6EE;
+  }
+
+  ul li a:hover, ul li a:focus{
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position:relative;
+    z-index:5;
+  }
+  
+  ul li{
+    margin:2rem;
+  }
+
+  #sticky-notes{
+    margin-left: -10rem;
+    margin-top: -8rem;
+  }
+  
